@@ -1,0 +1,13 @@
+.header {
+  @include container-width;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px
+}
+
+.header__menu-trigger {
+  display: inline-block;
+  width: 25px;
+  height: 22.5px;
+  background: url('../img/header__menu-trigger.svg') center center no-repeat;
+}

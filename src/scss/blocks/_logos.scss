@@ -1,0 +1,20 @@
+.logo {
+  display: inline-block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+.logo_iteaoffee {
+  @extend .logo;
+  width: 130px;
+  height: 24px;
+  background-image: url('./../img/itean-and-coffee-logo.svg');
+}
+
+.logo_softserve {
+  @extend .logo;
+  width: 199px;
+  height: 23px;
+  background-image: url('./../img/softserve-logo.svg');
+}

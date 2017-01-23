@@ -1,0 +1,93 @@
+.newsletter {
+  display: block;
+  padding: 65px 0 20px;
+  text-align: center;
+}
+
+.newsletter__title {
+  margin-bottom: 21px;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0 0 35px rgba(0, 0, 0, 0.21);
+}
+
+.newsletter__text {
+  display: block;
+  max-width: 873px;
+  margin: 0 auto 45px;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0 0 35px rgba(0, 0, 0, 0.21);
+}
+
+.newsletter__form {
+  display: block;
+  width: 252px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.newsletter__form-group {
+  display: block;
+  margin-bottom: 24px;
+  border-bottom: solid 3px #5c6267;
+}
+
+.newsletter__control {
+  display: block;
+  width: 100%;
+  padding: 7px 10px;
+  border: none;
+  background: none;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0 0 35px rgba(0, 0, 0, 0.21);
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    opacity: .5;
+  }
+}
+
+.newsletter__btn {
+  position: relative;
+  padding: 5px 14px;
+  border: none;
+  background: none;
+  min-width: 100px;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0 0 35px rgba(0, 0, 0, 0.21);
+
+  &:before {
+    position: absolute;
+    left: 39px;
+    bottom: 0;
+    display: block;
+    content: '';
+    width: 28px;
+    height: 3px;
+    background: #eb2861;
+    box-shadow: 0 1px 5px 0 #e92760;
+  }
+
+  &:focus {
+    outline-color: #eb2861;
+  }
+}

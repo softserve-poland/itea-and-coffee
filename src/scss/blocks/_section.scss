@@ -1,0 +1,46 @@
+.sections-group {
+  background: url('../img/common_texture.png') #0b1620;
+}
+
+.section {
+  padding-bottom: 30px;
+
+  &.section_relative {
+    position: relative;
+  }
+
+  &.section_b0 {
+    padding-bottom: 0
+  }
+}
+
+.section__title {
+  position: relative;
+  display: block;
+  padding: 109px 10px 0;
+  margin-bottom: 82px;
+
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+  text-shadow: 0 0 35px rgba(0, 0, 0, 0.21);
+  text-align: center;
+
+  &:before {
+    position: absolute;
+    left: 51.8%;
+    bottom: -6px;
+    content: '';
+
+    display: block;
+    width: 60px;
+    height: 5px;
+
+    background: #eb2861;
+  }
+
+  &.section__title_under-1:before {
+    left: 44%;
+  }
+}

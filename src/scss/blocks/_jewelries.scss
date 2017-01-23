@@ -1,0 +1,84 @@
+.jewelry {
+  position: relative;
+  display: inline-block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.jewelry_mac {
+  @extend .jewelry;
+  width: 287px;
+  height: 211px;
+  background-image: url('../img/jewelry__mac.png');
+  background-size: contain;
+
+  @media (min-width: $bp-tablet) {
+    width: 430px;
+    height: 317px;
+  }
+
+  @media (min-width: $bp-desktop) {
+    width: 861px;
+    height: 634px;
+  }
+}
+
+.jewelry_coffee {
+  @extend .jewelry;
+  width: 300px;
+  height: 286px;
+  background-image: url('../img/jewelry__coffee.png');
+}
+
+.jewelry_line {
+  @extend .jewelry;
+  width: 0;
+  height: 200px;
+  border: solid 6px #eb2861;
+}
+
+.jewelry_cross-1 {
+  @extend .jewelry;
+  width: 55px;
+  height: 57px;
+  background-image: url('../img/jewelry__cross-1.svg');
+  opacity: 0.8;
+}
+
+.jewelry_cross-2 {
+  @extend .jewelry;
+  width: 55px;
+  height: 57px;
+  background-image: url('../img/jewelry__cross-2.svg');
+  transform: rotate(-45deg);
+  opacity: 0.8;
+}
+
+.jewelry_cross-3 {
+  @extend .jewelry;
+  width: 67px;
+  height: 85px;
+  background-image: url('../img/jewelry__cross-3.svg');
+}
+
+.jewelry_cross-4 {
+  @extend .jewelry;
+  width: 88px;
+  height: 88px;
+  background-image: url('../img/jewelry__cross-4.svg');
+}
+
+.jewelry_cross-5 {
+  @extend .jewelry;
+  width: 89px;
+  height: 89px;
+  background-image: url('../img/jewelry__cross-5.svg');
+}
+
+.jewelry_cross-6 {
+  @extend .jewelry;
+  width: 63px;
+  height: 66px;
+  background-image: url('../img/jewelry__cross-6.svg');
+}

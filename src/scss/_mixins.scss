@@ -1,0 +1,40 @@
+@mixin container-width {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 15px;
+  box-sizing: border-box;
+
+  @media (min-width: $bp-tablet ) {
+    max-width: $bp-tablet;
+  }
+
+  @media (min-width: $bp-desktop ) {
+    max-width: $bp-desktop;
+  }
+}
+
+@mixin clear {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+     -moz-box-sizing: $box-model; // Firefox <= 19
+          box-sizing: $box-model;
+}

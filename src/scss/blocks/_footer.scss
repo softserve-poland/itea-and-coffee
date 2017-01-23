@@ -1,0 +1,92 @@
+.footer {
+  @include clearfix;
+  position: relative;
+  background-image: linear-gradient(to top, rgba(22, 31, 39, 0.96), #161f27);
+}
+
+.footer__inner {
+  position: relative;
+  z-index: 1;
+  padding-top: 70px;
+  text-align: center;
+}
+
+.footer__text {
+  margin: 29px 10px 47px;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0 0 35px rgba(0, 0, 0, 0.21);
+}
+
+.footer__fb {
+  position: relative;
+  display: inline-block;
+  margin-top: 105px;
+  margin-bottom: 110px;
+
+  color: #5c6267;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  text-shadow: 0 0 35px rgba(0, 0, 0, 0.21);
+  transition: color .15s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:visited {
+    color: #5c6267;
+  }
+
+  &:before {
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: block;
+    content: '';
+    width: 27.5px;
+    height: 10px;
+    border-bottom: 4px solid #5a6066;
+    transition: border 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover,
+  &:active {
+    color: #fff;
+    text-decoration: none;
+    &:before {
+      border-bottom-color: #fefefe;
+    }
+  }
+}
+
+.jewelry_line.jewelry_line_footer-1 {
+  position: absolute;
+  bottom: 32px;
+  right: 77px;
+  transform-origin: top;
+  transform: rotate(25deg);
+  height: 250px;
+}
+
+.jewelry_line.jewelry_line_footer-2 {
+  position: absolute;
+  top: 32px;
+  left: -13px;
+  transform-origin: top;
+  transform: rotate(-45deg);
+  height: 350px;
+}
+
+.jewelry_cross-5.jewelry__cross_footer-1 {
+  position: absolute;
+  bottom: 70px;
+  left: 120px;
+}
+
+.jewelry_cross-6.jewelry__cross_footer-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

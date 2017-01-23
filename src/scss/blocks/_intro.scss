@@ -1,0 +1,149 @@
+$intro-height: 700px;
+
+.intro {
+  position: relative;
+  z-index: 1;
+
+  display: block;
+  height: $intro-height;
+
+  background-color: #252f38;
+  background-image: url('../img/common_texture-opacity50.png');
+  background-image: linear-gradient(51deg, #303841, #09151f 98%, #08141f);
+}
+
+.intro__header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.intro__body {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+
+  @include box-sizing(border-box);
+
+  max-width: 100%;
+  padding: 0 10px;
+}
+
+.intro__hello {
+  margin: 0;
+  max-width: 785px;
+
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 12.5px;
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+
+  @media (min-width: $bp-tablet) {
+    font-size: 36px;
+  }
+
+  @media (min-width: $bp-desktop) {
+    font-size: 65px;
+  }
+}
+
+.intro__mission {
+  max-width: 713px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.21);
+}
+
+.intro__jewelries {
+  @include container-width;
+
+  position: relative;
+  z-index: 0;
+
+  display: block;
+  height: $intro-height;
+
+  overflow: hidden;
+  @media (min-width: $bp-tablet) {
+    overflow: visible;
+  }
+
+  .jewelry_coffee {
+    position: absolute;
+    left: -152px;
+    bottom: 0px;
+    @media (min-width: $bp-tablet) {
+      left: -82px;
+      bottom: -50px;
+    }
+    @media (min-width: $bp-desktop) {
+      bottom: -50px;
+    }
+  }
+
+  .jewelry_mac {
+    position: absolute;
+    top: 0;
+    display: none;
+    @media (min-width: $bp-tablet) {
+      right: -75px;
+      display: block;
+    }
+    @media (min-width: $bp-desktop) {
+      right: -10px;
+    }
+  }
+
+  .jewelry_line_left {
+    position: absolute;
+    top: 150px;
+    left: -12px;
+  }
+
+  .jewelry_line_top-right {
+    position: absolute;
+    top: 0;
+    right: 136px;
+    z-index: -1;
+  }
+}
+
+.jewelry_intro-top {
+  position: absolute;
+  top: -29px;
+  left: 316px;
+}
+
+.jewelry_intro-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.intro__join,
+.intro__join:visited {
+  position: absolute;
+  bottom: -19px;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  display: block;
+  width: 100px;
+  height: 80px;
+
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+  text-shadow: 0 0 35px rgba(0, 0, 0, 0.21);
+  text-align: center;
+  text-decoration: none;
+  background: url('../img/intro__join.svg') bottom center no-repeat;
+}

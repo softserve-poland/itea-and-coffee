@@ -1,0 +1,124 @@
+.about {
+  @include container-width;
+
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: $bp-desktop) {
+    flex-direction: row;
+  }
+}
+
+.about__imgs {
+  @include box-sizing(border-box);
+
+  position: relative;
+  z-index: 1;
+
+  flex: 1 0 auto;
+
+  width: 100%;
+  height: 524px;
+
+  @media (min-width: $bp-desktop) {
+    width: 592px;
+    height: 583px;
+    margin-right: 119px;
+  }
+}
+
+.about__img {
+  @include box-sizing(border-box);
+  position: absolute;
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.about__img_1 {
+  @extend .about__img;
+  top: 0;
+  left: 0;
+  width: 305px;
+  height: 349px;
+  @media (min-width: $bp-desktop) {
+    width: 534px;
+    height: 611px;
+  }
+  background-image: url('../img/about__img_1.png');
+}
+
+.about__img_2 {
+  @extend .about__img;
+  top: 264px;
+  left: 20px;
+  width: 287px;
+  height: 260px;
+  @media (min-width: $bp-desktop) {
+    top: 174px;
+    left: 216px;
+    width: 435px;
+    height: 393px;
+  }
+  background-image: url('../img/about__img_2.png');
+}
+
+.about__title {
+  margin-bottom: 11px;
+}
+
+.about__text {
+  position: relative;
+  align-self: center;
+
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+  text-shadow: 0 0 35px rgba(0, 0, 0, 0.21);
+
+  &:before {
+    position: absolute;
+    left: 11px;
+    bottom: 0;
+    content: '';
+    display: block;
+    width: 60px;
+    height: 6px;
+    background: #eb2861;
+  }
+}
+
+.about__jewelry_cross-1 {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+}
+
+.about__jewelry_cross-2 {
+  position: absolute;
+  top: 0;
+  left: 72px;
+}
+
+.about__jewelry_line-1 {
+  position: absolute;
+  top: 148px;
+  left: -30px;
+  transform-origin: top;
+  transform: rotate(-44deg);
+  height: 955px;
+  border-width: 7px;
+
+  display: none;
+  @media (min-width: $bp-desktop) {
+    display: block;
+  }
+}
+
+.about__jewelry_line-2 {
+  position: absolute;
+  top: 10px;
+  right: 72px;
+}

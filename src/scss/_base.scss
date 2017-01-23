@@ -1,0 +1,83 @@
+BODY {
+  background: #FFF;
+  font: #{$font-size}/1.4 $font-family;
+  color: $color-font;
+  font-weight: $font-weight;
+  background-image: linear-gradient(18deg, #303841, #09151f 98%, #08141f);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: none;
+}
+
+A {
+  color: $color-link;
+  text-decoration: none;
+
+  &:visited {
+    color: $color-link-visited;
+  }
+
+  &:hover {
+    color: $color-link-hover;
+  }
+}
+
+UL {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+H1, H2, H3, H4, H5 {
+  font-weight: normal;
+}
+
+mark {
+  color: #ea2b61;
+  background: none;
+}
+
+/* LAYOUT */
+
+.header,
+.container {
+  @include container-width;
+}
+
+.container {
+  // display: flex;
+
+  // @media ( max-width: $bp-tablet ) {
+  //   flex-direction: column;
+  // }
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.aside {
+  flex-basis: 200px;
+  margin-left: 30px;
+
+  @media ( max-width: $bp-tablet ) {
+    flex-basis: 0;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}
+
+.hidden-xs {
+  display: none !important;
+
+  @media (min-width: $bp-tablet) {
+    display: block !important;
+  }
+}
+
+.scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}

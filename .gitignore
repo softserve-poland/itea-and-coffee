@@ -1,0 +1,10 @@
+.DS_Store
+.env
+.sass-cache/
+.publish/
+node_modules/
+build/
+assets/
+api/cache/
+npm-debug.log
+*.sublime*
