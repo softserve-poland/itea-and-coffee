@@ -5,11 +5,9 @@
  */
 ;(function(root) {
   var galleryId = 'gallery';
-  var accessToken = '3900751104.ba870fe.01b95d10cb594df5b527a11489a9a407';
-  var userId = 3900751104;
   var isMobile = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
 
-  InstaGallery(galleryId, accessToken, userId).run();
+  InstaGallery(galleryId).run();
 
   if (!isMobile) {
     ParallaxRunner()
@@ -24,6 +22,15 @@
       .run();
   }
 
-  root.modal1 = FullEventModal('#event-1');
-  root.modal2 = FullEventModal('#event-2');
+  root.modalDragon = FullEventModal('#event-modal__dragon');
+  root.modalOrange = FullEventModal('#event-modal__orange');
+  root.modalPomegranate = FullEventModal('#event-modal__pomegranate');
+  root.modalPear = FullEventModal('#event-modal__pear');
+  root.modalApple = FullEventModal('#event-modal__apple');
+
+  root.eventsSlider = EventsSlider({
+    element: '#events',
+    scroll : '#events-scroll',
+  });
+
 })(window);

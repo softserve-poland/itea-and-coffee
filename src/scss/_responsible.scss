@@ -1,0 +1,23 @@
+.hidden-mobile-down {
+  display: none !important;
+
+  @media (min-width: $bp-mobile) {
+    display: block !important;
+  }
+}
+
+.hidden-tablet-down {
+  display: none !important;
+  
+  @media (min-width: $bp-tablet) {
+    display: block !important;
+  }
+}
+
+.hidden-desktop-down {
+  display: none !important;
+
+  @media (min-width: $bp-desktop) {
+    display: block !important;
+  }
+}

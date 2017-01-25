@@ -1,4 +1,4 @@
-<?php defined('DOCROOT') or die('No direct script access.');
+<?php defined('DOCROOT') OR die('No direct script access.');
 
 return array(
   'access_token' => '0000000000.YYYYYYY.ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ',

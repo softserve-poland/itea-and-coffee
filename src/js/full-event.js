@@ -30,6 +30,8 @@ FullEventModal.prototype.open = function() {
   }, 0)
 
   this.isOpen = true;
+
+  return false;
 };
 
 FullEventModal.prototype.close = function() {

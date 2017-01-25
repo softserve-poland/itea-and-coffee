@@ -14,6 +14,7 @@ var copy = require('gulp-copy');
 var ghPages = require('gulp-gh-pages');
 var colors = require('colors/safe');
 var del = require('del');
+var ftp = require('vinyl-ftp');
 
 // SASS, AUTOPREFIXR, MINIMIZE
 gulp.task('sass', function() {
@@ -109,6 +110,25 @@ gulp.task('ghPages', function() {
 
   return gulp.src('build/**/*')
     .pipe(ghPages());
+});
+
+// DEPPLOY BY FTP
+gulp.task('deploy-ftp', function () {
+  var conn = ftp.create({
+    host     : process.env.FTP_HOST,
+    user     : process.env.FTP_USER,
+    password : process.env.FTP_PASSWORD,
+    parallel : 10,
+    log      : process.env.FTP_DEBUG && function(str) { console.log(colors.green(str)) },
+  });
+
+  var globs = [
+    'build/**',
+  ];
+
+  return gulp.src( globs, { base: 'build', buffer: false } )
+    .pipe( conn.newerOrDifferentSize('/')) // only upload newer files
+    .pipe( conn.dest('/'));
 });
 
 gulp.task('default', function() {

@@ -25,13 +25,15 @@
     "gulp-postcss": "^6.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-ruby-sass": "^2.0.6",
-    "imagemin-pngquant": "^4.2.2"
+    "imagemin-pngquant": "^4.2.2",
+    "vinyl-ftp": "^0.5.0"
   },
   "scripts": {
     "start": "gulp serve",
     "img": "gulp images",
     "build": "gulp sass && gulp include && gulp copy",
     "deploy": "npm run build && gulp ghPages",
+    "deploy-ftp": "npm run build && gulp deploy-ftp",
     "check": "editorconfig-tools check *",
     "fix": "editorconfig-tools fix *"
   }

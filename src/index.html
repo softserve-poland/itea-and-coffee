@@ -54,9 +54,7 @@
         <div class="header__logo">
           <a href class="logo_iteaoffee"></a>
         </div>
-        <!-- <div class="header__menu">
-          <a href="#" class="header__menu-trigger"></a>
-        </div> -->
+        <!-- <div class="header__menu"><a href="#" class="header__menu-trigger"></a></div> -->
       </div>
     </div><!-- /.intro__header -->
 
@@ -73,10 +71,9 @@
     </div>
 
     <div class="intro__body">
-      <!-- <div class="intro__hello">enjoy first IT&nbsp;<del>breakfasts</del></div> -->
       <div class="intro__hello">we&nbsp;wake&nbsp;you&nbsp;up from&nbsp;your&nbsp;IT&nbsp;routine</div>
       <div class="intro__mission">We would like to invite you on first it mornings in Wroclaw, come before work and enjoy IT conversations with experienced people.</div>
-    </div><!-- /.intro__body -->
+    </div>
 
     <a href="" class="intro__join" onclick="$scrollTo(document.body, 700, 200); return false;">explore</a>
   </div>
@@ -86,27 +83,23 @@
     <div class="section" style="position: relative; z-index: 1;">
       <div class="section__title">Events</div>
 
-      <div class="events">
-        <div class="event event_past">
-          <div class="event__title event__title-back">dragon</div>
-          <div class="event__title">event</div>
-          <div class="event__bg_1"></div>
-          <div class="event__date">06 <i>/</i> 10 <i>/</i> 16</div>
-          <a href="#event-1" onclick="modal1.open(); return false;" class="event__more">more information</a>
+      <div id="events" class="events">
+        <div class="events__control events__control_left hidden-desktop-down">
+          <a href="#left" class="events__arrow events__arrow_left" onclick="eventsSlider.scrollLeft(); return !1;"></a>
         </div>
-        <div class="event">
-          <div class="event__title event__title-back">orange</div>
-          <div class="event__title">event</div>
-          <div class="event__bg_2"></div>
-          <div class="event__date">03 <i>/</i> 11 <i>/</i> 16</div>
-          <a href="#event-2" onclick="modal2.open(); return false;" class="event__more">more information</a>
+
+        <div class="events__control events__control_right hidden-desktop-down">
+          <a href="#right" class="events__arrow" onclick="eventsSlider.scrollRight(); return !1;"></a>
         </div>
-        <div class="event event_future">
-          <div class="event__title event__title-back">grenate</div>
-          <div class="event__title">event</div>
-          <div class="event__bg_3"></div>
-          <div class="event__date">01 <i>/</i> 12 <i>/</i> 16</div>
-          <a class="event__more event__more_disabled">more information</a>
+
+        <div class="events__scroll-wrapper" dir="rtl">
+          <div id="events-scroll" class="events__scroll">
+            <div class="events__inner">
+
+              <!--=include blocks/events__list.html -->
+
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -186,54 +179,19 @@
       <div class="jewelry_cross-6 jewelry__cross_footer-2"></div>
     </div>
   </div>
+  
+  <!--=include blocks/event-modal__dragon.html -->
+  <!--=include blocks/event-modal__orange.html -->
+  <!--=include blocks/event-modal__pomegranate.html -->
+  <!--=include blocks/event-modal__pear.html -->
+  <!--=include blocks/event-modal__apple.html -->
 
-  <div id="event-1" class="full-event">
-    <div class="full-event__modal">
-      <div class="full-event__modal-content">
-        <button class="full-event__close"></button>
-        <div class="full-event__title">dragon event</div>
-        <div class="full-event__loc">start 8:30 <mark>|</mark> 06 <mark>/</mark> 10 <mark>/</mark> 16 <mark>|</mark> Dinette <mark>-</mark> plac Teatralny 8<mark>,</mark> Wrocław</div>
-        <div class="full-event__sub">Topics</div>
-
-        <div class="full-event__topic"><mark>-</mark> Exploring C# 7 features</div>
-        <div class="full-event__topic-content">With our friend, Piotr Czarnecki, experienced .Net developer will try to check out what new ideas have been explored and shared by Microsoft in new release of C# 7.0. Some of changes to the language will be presented in practice, based on simple examples (using Visual Studio 15 Preview IDE). We hope that after this short presentation, we all will know what new features we can expect from C# 7.0</div>
-
-        <div class="full-event__topic"><mark>-</mark> What reeks in your code?</div>
-        <div class="full-event__topic-content">Most of us like nice smells. We would like to smell it long. Sometimes there is a bad smell around us and then we want to get away. Our colleague, Maciej Paruszewski, experienced Ruby developer / technical leader will help us to recognize the smell of the source code. This short presentation will be free of any specific technology and we believe that will be useful for all developers, testers or product managers.</div>
-
-        <div class="full-event__img full-event__img_dragon full-event__img_left"></div>
-        <div class="full-event__img full-event__img_dragon full-event__img_right"></div>
-      </div>
-    </div>
-  </div>
-
-  <div id="event-2" class="full-event">
-    <div class="full-event__modal">
-      <div class="full-event__modal-content">
-        <button class="full-event__close"></button>
-        <div class="full-event__title">orange event</div>
-        <div class="full-event__loc">start 8:30 <mark>|</mark> 03 <mark>/</mark> 11 <mark>/</mark> 16 <mark>|</mark> Proza (2nd floor) <br> Przejście Garncarskie 2<mark>,</mark> Wrocław</div>
-        <div class="full-event__sub">Topics</div>
-
-        <div class="full-event__topic"><mark>-</mark> Open-source projects, which care about your security</div>
-        <div class="full-event__topic-content">Our security engineer, <strong>Paweł</strong>, will present 2 great open-source projects that can help to improve a security in your IT projects: OWASP WebGoat and OWASP OWTF (Offensive Web Testing Framework). Paweł will show you how easily use both and get a profit for your projects.</div>
-
-        <div class="full-event__topic"><mark>-</mark> Gamification in teaching Agile methodologies</div>
-        <div class="full-event__topic-content">Gamification is the concept of applying game elements and techniques to engage and motivate people to achieve their goals. During this short presentation, our project manager, Remigiusz, will share with us a case study of using this tool in teaching Agile methodologies (scrum in particular) to students of Wroclaw University of Science and Technology. Remik will demonstrate outcomes of experimental classes conducted in 2015/16 together with conclusions and hints for using Gamification in various projects, not only related to education.</div>
-
-        <div class="full-event__img full-event__img_orange full-event__img_left"></div>
-        <div class="full-event__img full-event__img_orange full-event__img_right"></div>
-      </div>
-    </div>
-  </div>
-
-  <script src="./assets/js/es5-shim.js" type="text/javascript"></script>
-  <script src="./assets/js/es6-shim.js" type="text/javascript"></script>
   <script src="./assets/js/instagallery.js?3" type="text/javascript"></script>
   <script src="./assets/js/parallax.js?3" type="text/javascript"></script>
   <script src="./assets/js/full-event.js?3" type="text/javascript"></script>
   <script src="./assets/js/newsletter.js" type="text/javascript"></script>
   <script src="./assets/js/scrollto.js" type="text/javascript"></script>
+  <script src="./assets/js/events-slider.js?3" type="text/javascript"></script>
   <script src="./assets/js/script.js?4"></script>
 </body>
 </html>

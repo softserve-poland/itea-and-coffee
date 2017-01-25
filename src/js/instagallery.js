@@ -3,9 +3,11 @@
  *
  * @author Andrew Fedyk <https://github.com/fedyk>
  */
-function InstaGallery(targetId, accessToken, userId) {
-  if (this === window)
-    return new InstaGallery(targetId, accessToken, userId);
+function InstaGallery(targetId) {
+
+  if (this === window) {
+    return new InstaGallery(targetId);
+  }
 
   this.url = '/api/images.php';
 

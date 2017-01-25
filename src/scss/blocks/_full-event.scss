@@ -126,10 +126,16 @@ body.full-event__open-modal {
 
 .full-event__title {
   margin-bottom: 9px;
-  font-size: 60px;
+  padding: 0 30px;
+  font-size: 40px;
   font-weight: 600;
   color: #ffffff;
   text-shadow: 0 0 35px rgba(0, 0, 0, 0.3);
+
+  @media (min-width: $bp-tablet) {
+    padding: 0;
+    font-size: 60px;
+  }
 }
 
 .full-event__loc {

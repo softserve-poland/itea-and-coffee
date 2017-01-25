@@ -7,4 +7,5 @@ build/
 assets/
 api/cache/
 npm-debug.log
+index.html
 *.sublime*
