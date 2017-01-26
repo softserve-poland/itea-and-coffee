@@ -1,27 +1,12 @@
-function EventsSlider(options) {
-
-  if (this === window) {
-    return new EventsSlider(options);
-  }
-
-  this.$$element = document.querySelector(options.element);
-  this.$$scroll = document.querySelector(options.scroll);
-  this.animationDuration = 150;
+function getEventsSliderScrollEl() {
+  return document.querySelector('#events-scroll');
 }
 
-EventsSlider.prototype.scrollTo = function(direction) {
-  var element = this.$$scroll;
-  var to = this.$$scroll.scrollLeft + direction;
-  var duration = 200; // s
+function scrollEventsSlider(direction) {
+  var element = getEventsSliderScrollEl();
+  var to = element.scrollLeft + direction;
+  var duration = 200; // 200s
   var direction = 'scrollLeft';
 
-  $scrollTo(element, to, duration, direction)
-};
-
-EventsSlider.prototype.scrollLeft = function() {
-  return this.scrollTo(-356);
-};
-
-EventsSlider.prototype.scrollRight = function() {
-  return this.scrollTo(356);
-};
+  $scrollTo(element, to, duration, direction);
+}

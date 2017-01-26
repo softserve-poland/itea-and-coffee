@@ -28,9 +28,4 @@
   root.modalPear = FullEventModal('#event-modal__pear');
   root.modalApple = FullEventModal('#event-modal__apple');
 
-  root.eventsSlider = EventsSlider({
-    element: '#events',
-    scroll : '#events-scroll',
-  });
-
 })(window);
