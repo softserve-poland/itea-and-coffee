@@ -1,4 +1,6 @@
-# ITea and Coffee
+[![Build Status](https://travis-ci.org/fedyk/itea-and-coffee.svg?branch=master)](https://travis-ci.org/fedyk/itea-and-coffee)
+
+# ITea and Coffee 
 
 Promo page for Event organized by Soft Serve Poland.
 
