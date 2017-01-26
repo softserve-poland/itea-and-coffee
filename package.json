@@ -33,7 +33,7 @@
     "img": "gulp images",
     "build": "gulp sass && gulp include && gulp copy",
     "deploy": "npm run build && gulp ghPages",
-    "deploy-ftp": "npm run build && gulp deploy-ftp",
+    "deploy-ftp": "gulp deploy-ftp",
     "check": "editorconfig-tools check *",
     "fix": "editorconfig-tools fix *"
   }

@@ -123,12 +123,12 @@ gulp.task('deploy-ftp', function () {
   });
 
   var globs = [
-    'build/**',
+    'build/**/*',
   ];
 
-  return gulp.src( globs, { base: 'build', buffer: false } )
-    .pipe( conn.newerOrDifferentSize('/')) // only upload newer files
-    .pipe( conn.dest('/'));
+  return gulp.src(globs, { base: 'build', buffer: false })
+    .pipe(conn.newerOrDifferentSize('/'))
+    .pipe(conn.dest('/'));
 });
 
 gulp.task('default', function() {
