@@ -19,15 +19,15 @@ var ftp = require('vinyl-ftp');
 // SASS, AUTOPREFIXR, MINIMIZE
 gulp.task('sass', function() {
   var processors = [
-        autoprefixer({browsers: [
-          'last 1 version',
-          'last 2 Chrome versions',
-          'last 2 Firefox versions',
-          'last 2 Opera versions',
-          'last 2 Edge versions'
-          ]}),
-        mqpacker()
-    ];
+    autoprefixer({browsers: [
+      'last 1 version',
+      'last 2 Chrome versions',
+      'last 2 Firefox versions',
+      'last 2 Opera versions',
+      'last 2 Edge versions'
+      ]}),
+    mqpacker()
+  ];
 
   console.log('⬤  Run ' + colors.yellow('Sass') +
               ' + ' +
@@ -39,7 +39,6 @@ gulp.task('sass', function() {
   return sass('src/scss/styles.scss')
     .pipe(postcss(processors))
     .pipe(gulp.dest('assets/css'))
-    .pipe(reload({ stream:true }))
     .pipe(postcss([cssnano()]))
     .pipe(rename('styles.min.css'))
     .pipe(gulp.dest('assets/css'));
@@ -48,8 +47,7 @@ gulp.task('sass', function() {
 // JS
 gulp.task('js', function () {
   return gulp.src('src/js/**/*.js')
-  .pipe(gulp.dest('assets/js/'))
-  .pipe(reload({ stream:true }));
+    .pipe(gulp.dest('assets/js/'));
 });
 
 // IMAGES

@@ -31,8 +31,8 @@
   "scripts": {
     "start": "gulp serve",
     "img": "gulp images",
-    "build": "gulp sass && gulp include && gulp copy",
-    "deploy": "npm run build && gulp ghPages",
+    "build": "gulp sass && gulp js && gulp include && gulp copy",
+    "deploy": "gulp ghPages",
     "deploy-ftp": "gulp deploy-ftp",
     "check": "editorconfig-tools check *",
     "fix": "editorconfig-tools fix *"
