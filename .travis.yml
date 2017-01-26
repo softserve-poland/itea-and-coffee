@@ -1,9 +1,17 @@
 language: node_js
-node_js:
-  - "6"
+
+node_js: "6"
+
+before_install:
+  - "export DISPLAY=:99.0"
+  - gem install sass
+
 install:
   - npm install
+
 script:
   - npm run img
   - npm run build
+
+after_success:
   - npm run deploy-ftp
