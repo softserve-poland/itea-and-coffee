@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - "6"
+install:
+  - npm install
+script:
+  - npm run img
+  - npm run build
+  - npm run deploy-ftp
