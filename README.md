@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/fedyk/itea-and-coffee.svg?branch=master)](https://travis-ci.org/fedyk/itea-and-coffee)
 
-# ITea and Coffee 
+# ITea and Coffee
 
 Promo page for Event organized by Soft Serve Poland.
 
@@ -55,9 +55,9 @@ Step two:
 
 ```
 curl -F 'client_id=CLIENT ID' \
-    -F 'client_secret=CLIENT SECRET' \
-    -F 'grant_type=authorization_code' \
-    -F 'redirect_uri=redirect_uri' \
-    -F 'code=CODE' \
-    https://api.instagram.com/oauth/access_token
+  -F 'client_secret=CLIENT SECRET' \
+  -F 'grant_type=authorization_code' \
+  -F 'redirect_uri=redirect_uri' \
+  -F 'code=CODE' \
+  https://api.instagram.com/oauth/access_token
 ```
