@@ -81,3 +81,9 @@ mark {
   height: 50px;
   overflow: scroll;
 }
+
+.text-overflow {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

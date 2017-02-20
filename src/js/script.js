@@ -27,5 +27,6 @@
   root.modalPomegranate = FullEventModal('#event-modal__pomegranate');
   root.modalPear = FullEventModal('#event-modal__pear');
   root.modalApple = FullEventModal('#event-modal__apple');
+  root.modalBlueberry = FullEventModal('#event-modal__blueberry');
 
 })(window);

@@ -73,7 +73,6 @@
   width: 300px;
   height: 350px;
   padding: 37px 25px 25px;
-  margin-right: 20px;
 
   border-radius: 10px;
   background-color: #020e19;
@@ -145,6 +144,12 @@
 .event__bg_pear {
   @extend .event__bg;
   background-image: url('../img/event__bg_pear.png');
+  background-size: 229px;
+}
+
+.event__bg_blueberry {
+  @extend .event__bg;
+  background-image: url('../img/event__bg_blueberry.png');
   background-size: 229px;
 }
 

@@ -15,7 +15,7 @@ function getEventsSliderScrollEl() {
 function scrollEventsSlider(direction) {
   var element = getEventsSliderScrollEl();
   var to = element.scrollLeft + direction;
-  var duration = 200; // 200s
+  var duration = 100; // 200s
   var direction = 'scrollLeft';
 
   $scrollTo(element, to, duration, direction);
