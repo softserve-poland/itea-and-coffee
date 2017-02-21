@@ -16,7 +16,6 @@
     "css-mqpacker": "^4.0.1",
     "cssnano": "^3.5.2",
     "del": "^2.2.0",
-    "editorconfig-tools": "^0.1.1",
     "gulp": "^3.9.1",
     "gulp-copy": "0.0.2",
     "gulp-gh-pages": "^0.5.4",
@@ -33,8 +32,6 @@
     "img": "gulp images",
     "build": "gulp sass && gulp js && gulp include && gulp copy",
     "deploy": "gulp ghPages",
-    "deploy-ftp": "gulp deploy-ftp",
-    "check": "editorconfig-tools check *",
-    "fix": "editorconfig-tools fix *"
+    "deploy-ftp": "gulp deploy-ftp"
   }
 }
