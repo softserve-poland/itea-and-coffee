@@ -76,7 +76,11 @@ InstaGallery.prototype.run = function(e) {
 
       // Success
       if (xhr.status == 200) {
-        var json = JSON.parse(xhr.responseText);
+        var json;
+
+        try {
+          json = JSON.parse(xhr.responseText);
+        } catch(e) {}
 
         _this.parseResp(json);
       }

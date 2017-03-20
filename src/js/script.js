@@ -28,5 +28,6 @@
   root.modalPear = FullEventModal('#event-modal__pear');
   root.modalApple = FullEventModal('#event-modal__apple');
   root.modalBlueberry = FullEventModal('#event-modal__blueberry');
+  root.modalKiwi = FullEventModal('#event-modal__kiwi');
 
 })(window);

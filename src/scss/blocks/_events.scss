@@ -153,6 +153,12 @@
   background-size: 229px;
 }
 
+.event__bg_kiwi {
+  @extend .event__bg;
+  background-image: url('../img/event__bg_kiwi@2x.png');
+  background-size: 282px;
+}
+
 .event__date {
   position: relative;
   font-size: 18px;
