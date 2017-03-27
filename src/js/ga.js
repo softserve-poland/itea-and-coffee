@@ -8,11 +8,14 @@ ga('send', 'pageview');
 
 (function() {
   function onClick(event) {
-    var eventCategory = 'common';
-    var eventAction = 'click';
     var eventLabel = event.target && event.target.className || 'Unknown Element';
 
-    ga('send', 'event', [eventCategory], [eventAction], [eventLabel]);
+    ga('send', 'event', {
+      eventCategory: 'General',
+      eventAction: 'click',
+      eventLabel: event.target.href || event.target.className || 'Unknown',
+      transport: 'beacon'
+    });
   }
 
   if (document.addEventListener) {
