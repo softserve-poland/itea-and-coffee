@@ -67,7 +67,7 @@ gulp.task('images', function () {
 gulp.task('include', function() {
   console.log(colors.blue('⬤  Include files to HTML... ⬤'));
 
-  gulp.src('src/index.html')
+  gulp.src('src/*.html')
     .pipe(include())
       .on('error', console.log)
     .pipe(gulp.dest('.'))
