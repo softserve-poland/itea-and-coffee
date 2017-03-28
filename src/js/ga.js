@@ -6,6 +6,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-91380182-1', 'auto');
 ga('send', 'pageview');
 
+// On click events
 (function() {
   function onClick(event) {
     var eventLabel = event.target && event.target.className || 'Unknown Element';
@@ -23,4 +24,19 @@ ga('send', 'pageview');
   } else if (document.attachEvent)  {
     document.attachEvent('onclick', onClick);
   }
+})();
+
+// on error event
+(function() {
+  window.onerror = function(errorMsg, url, lineNumber, column, errorObj) {
+    var error = 'Error: ' + errorMsg + ' Script: ' + url + ' Line: ' + lineNumber
+      + ' Column: ' + column + ' StackTrace: ' +  errorObj;
+
+    ga('send', 'event', {
+      eventCategory: 'Error',
+      eventAction: 'error',
+      eventLabel: error,
+      transport: 'beacon'
+    });
+  };
 })();
