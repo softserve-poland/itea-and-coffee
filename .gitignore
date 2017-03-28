@@ -9,3 +9,4 @@ api/cache/
 npm-debug.log
 index.html
 *.sublime*
+api/config/*.php

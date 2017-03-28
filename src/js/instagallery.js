@@ -14,21 +14,6 @@ function InstaGallery(targetId) {
   this.target = document.getElementById(targetId);
 }
 
-/**
- * Parse response and render it
- */
-InstaGallery.prototype.parseResp = function(resp) {
-  var data = ((resp || {}).data) || [];
-  var images = data.map(function(item) {
-    var images = item.images || {};
-    var low_resolution = images.low_resolution || {};
-
-    return {src: low_resolution.url};
-  });
-
-  this.render(images);
-};
-
 InstaGallery.prototype.handleError = function(e) {
   consolo.log('Handle exception');
 };
@@ -36,25 +21,64 @@ InstaGallery.prototype.handleError = function(e) {
 /**
  * Spliting resp in two rows
  */
-InstaGallery.prototype.render = function(images) {
+InstaGallery.prototype.render = function(data) {
+  var images = data && data.data || [];
   var half = Math.ceil(images.length / 2);
   var row = images.splice(0, half);
   var items = [images, row];
   var i = 2;
-  var el;
+  var row;
+  var item;
+  var figure;
+  var link;
   var img;
+  var meta;
 
   while(i--) {
-    el = document.createElement('div');
-    el.className = 'gallery__row';
-    this.target.appendChild(el);
+    row = ce('div');
+    row.className = 'gallery__row';
+    this.target.appendChild(row);
 
-    for (var j = items[i].length - 1; j >= 0; j--) {
-      img = document.createElement('img');
+    for (var j = 0; j < items[i].length; j++) {
+      item = items[i][j] || {};
+
+    // for (var j = items[i].length - 1; j >= 0; j--) {
+      figure = ce('figure');
+      figure.className = 'gallery__figure';
+      figure.setAttribute('itemprop', 'associatedMedia');
+      figure.setAttribute('itemscope', '');
+      figure.setAttribute('itemtype', 'http://schema.org/ImageObject');
+
+      row.appendChild(figure);
+
+      link = ce('a');
+      link.className = 'gallery__link';
+      link.href = item.link;
+      link.setAttribute('itemprop', 'discussionUrl');
+
+      figure.appendChild(link);
+
+      img = ce('img');
+      img.setAttribute('itemprop', 'contentUrl');
       img.width = 288;
       img.height = 288;
-      img.src = items[i][j].src;
-      el.appendChild(img);
+      img.src = item.images.standard_resolution.url;
+      img.alt = item.caption.text;
+
+      link.appendChild(img);
+
+      meta = [
+        ce('mata'),
+        ce('meta')
+      ];
+
+      meta[0].setAttribute('itemprop', 'width');
+      meta[0].setAttribute('content', item.images.standard_resolution.width);
+      meta[1].setAttribute('itemprop', 'height');
+      meta[1].setAttribute('content', item.images.standard_resolution.height);
+
+      figure.appendChild(meta[0]);
+      figure.appendChild(meta[1]);
     }
   }
 };
@@ -76,13 +100,13 @@ InstaGallery.prototype.run = function(e) {
 
       // Success
       if (xhr.status == 200) {
-        var json;
+        var json = {};
 
         try {
           json = JSON.parse(xhr.responseText);
         } catch(e) {}
 
-        _this.parseResp(json);
+        _this.render(json);
       }
     };
 
