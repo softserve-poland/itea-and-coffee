@@ -11,6 +11,7 @@ install:
 script:
   - npm run img
   - npm run build
+  - npm run sitemap
 
 after_success:
   - npm run deploy-ftp

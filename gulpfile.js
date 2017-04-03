@@ -15,6 +15,7 @@ var ghPages = require('gulp-gh-pages');
 var colors = require('colors/safe');
 var del = require('del');
 var ftp = require('vinyl-ftp');
+var sitemap = require('gulp-sitemap');
 
 // SASS, AUTOPREFIXR, MINIMIZE
 gulp.task('sass', function() {
@@ -108,6 +109,20 @@ gulp.task('ghPages', function() {
 
   return gulp.src('build/**/*')
     .pipe(ghPages());
+});
+
+// GENERATE SITEMAP.XML FOR SITE
+gulp.task('sitemap', function() {
+  console.log(colors.green('⬤  Generate Simemap.xml... ⬤'));
+
+  return gulp.src('src/*.html')
+    .pipe(sitemap({
+      siteUrl: 'http://www.iteandcoffee.pl',
+      changefreq: 'weekly',
+      priority: '1.0',
+      lastmod: Date.now()
+    }))
+    .pipe(gulp.dest('./build'));
 });
 
 // DEPPLOY BY FTP
