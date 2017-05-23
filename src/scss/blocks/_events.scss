@@ -165,6 +165,12 @@
   background-size: 282px;
 }
 
+.event__bg_strawberry {
+  @extend .event__bg;
+  background-image: url('../img/event__bg_strawberry@2x.png');
+  background-size: 282px;
+}
+
 .event__date {
   position: relative;
   font-size: 18px;
