@@ -7,6 +7,18 @@ body.full-event__open-modal {
   min-height: 435px;
 }
 
+.full-event__logo {
+  margin-bottom: 10px;
+  &--softserve {
+    width: 180px;
+    height: auto;
+  }
+  &--horizontal {
+    width: 200px;
+    height: auto;
+  }
+}
+
 .full-event__modal {
   position: relative;
   z-index: 1;
@@ -184,7 +196,7 @@ body.full-event__open-modal {
   display: none;
   margin-bottom: 50px;
   font-size: 16px;
-  text-align: center;
+  text-align: justify;
   color: #ffffff;
   text-shadow: 0 0 35px rgba(0, 0, 0, 0.21);
 
