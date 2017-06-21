@@ -159,13 +159,31 @@
   background-size: 282px;
 }
 
+.event__bg_papaya {
+  @extend .event__bg;
+  background-image: url('../img/event__bg_papaya@2x.png');
+  background-size: 282px;
+}
+
+.event__bg_strawberry {
+  @extend .event__bg;
+  background-image: url('../img/event__bg_strawberry@2x.png');
+  background-size: 282px;
+}
+
+.event__bg_cherry {
+  @extend .event__bg;
+  background-image: url('../img/event__bg_cherry@2x.png');
+  background-size: 282px;
+}
+
 .event__date {
   position: relative;
   font-size: 18px;
   font-weight: 600;
   letter-spacing: 1.5px;
   text-shadow: 0 0 35px rgba(0, 0, 0, 0.21);
-  
+
   [dir="rtl"] & {
     text-align: left;
   }

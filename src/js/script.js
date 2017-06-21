@@ -29,5 +29,8 @@
   root.modalApple = FullEventModal('#event-modal__apple');
   root.modalBlueberry = FullEventModal('#event-modal__blueberry');
   root.modalKiwi = FullEventModal('#event-modal__kiwi');
+  root.modalPapaya = FullEventModal('#event-modal__papaya');
+  root.modalStrawberry = FullEventModal('#event-modal__strawberry');
+  root.modalCherry = FullEventModal('#event-modal__cherry');
 
 })(window);
